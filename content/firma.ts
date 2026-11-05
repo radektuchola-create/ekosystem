@@ -19,8 +19,8 @@ export const firma = {
   wojewodztwa: ["kujawsko-pomorskie", "pomorskie"],
   liczbaGmin: 15,
   statystyki: {
-    lataDoswiadczenia: 20,
-    lataDzialalnosci: 15,
+    lataDoswiadczenia: new Date().getFullYear() - 2006,
+    lataDzialalnosci: new Date().getFullYear() - 2011,
     liczbaGmin: 15,
     liczbaPowiatow: 5,
   },

@@ -22,7 +22,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-400">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-300">
             Nawigacja
           </h3>
           <ul className="mt-4 space-y-2">
@@ -37,7 +37,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-400">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-300">
             Kontakt
           </h3>
           <ul className="mt-4 space-y-3 text-sm text-slate-200">
@@ -61,7 +61,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-400">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-300">
             Obszar działania
           </h3>
           <p className="mt-4 text-sm leading-relaxed text-slate-200">
@@ -73,7 +73,7 @@ export function Footer() {
       </Container>
 
       <div className="border-t border-white/10">
-        <Container className="flex flex-col items-center justify-between gap-3 py-6 text-xs text-slate-400 sm:flex-row">
+        <Container className="flex flex-col items-center justify-between gap-3 py-6 text-xs text-slate-300 sm:flex-row">
           <p>© {new Date().getFullYear()} {firma.nazwaPelna}. Wszelkie prawa zastrzeżone.</p>
           <Link href="/polityka-prywatnosci" className="hover:text-white">
             Polityka prywatności

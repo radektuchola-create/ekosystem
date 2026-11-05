@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { AnimatedCounter } from "@/components/motion/AnimatedCounter";
+import { Icon } from "@/components/ui/Icon";
 import { NetworkPattern } from "@/components/ui/NetworkPattern";
 import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
 import { firma } from "@/content/firma";
@@ -41,7 +42,21 @@ export function Statystyki() {
           ))}
         </div>
 
-        <p className="mt-12">
+        <ul className="mt-12 grid gap-4 border-t border-white/10 pt-8 text-sm text-slate-200 sm:grid-cols-2">
+          {[firma.uprawnienia.budowlane, firma.uprawnienia.projektowe].map((u) => (
+            <li key={u.numer} className="flex items-start gap-3">
+              <Icon name="ShieldCheck" className="mt-0.5 h-5 w-5 shrink-0 text-brand-blue-300" strokeWidth={1.75} />
+              <span>
+                Uprawnienia {u.typ === "Projektowe" ? "projektowe" : "budowlane"} bez ograniczeń
+                <span className="block text-slate-300">
+                  nr {u.numer}, {u.data.slice(-4)}
+                </span>
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        <p className="mt-8">
           <Link href="/o-mnie" className="text-sm font-semibold text-white underline underline-offset-4 hover:text-brand-blue-300">
             Zobacz pełną historię zawodową i uprawnienia →
           </Link>

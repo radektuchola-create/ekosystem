@@ -4,6 +4,7 @@
   /* Brand — blue/green z logo, zdominowane grafitem/granatem dla tonu inżynierskiego */
   --color-brand-blue-50: #eaf5fb;
   --color-brand-blue-100: #d2eaf6;
+  --color-brand-blue-300: #7cc0e6;
   --color-brand-blue-400: #4fa8d6;
   --color-brand-blue-500: #2e8fc4;
   --color-brand-blue-600: #2478a8;
@@ -17,9 +18,13 @@
 
   --color-graphite-50: #f5f7f8;
   --color-graphite-100: #e9edef;
+  --color-graphite-200: #dfe5e7;
   --color-graphite-300: #aab6bc;
+  --color-graphite-400: #8a9aa3;
+  --color-graphite-500: #66757d;
   --color-graphite-600: #4b5a63;
   --color-graphite-700: #384249;
+  --color-graphite-800: #2b373e;
   --color-graphite-900: #1e2a32;
 
   --color-slate-50: #f6f8f9;
@@ -54,6 +59,27 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-brand-blue-500);
+  outline-offset: 2px;
+}
+
+@keyframes wejscie-z-dolu {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wejscie-z-dolu {
+  animation: wejscie-z-dolu 0.7s ease-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {

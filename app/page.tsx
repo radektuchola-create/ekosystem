@@ -9,9 +9,9 @@ import { CTAFinal } from "@/sections/CTAFinal";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Biuro projektów branży sanitarnej — Kujawsko-Pomorskie",
+  title: "Biuro projektów branży sanitarnej, Kujawsko-Pomorskie | EKO-SYSTEM",
   description:
-    "Projekty sieci wodociągowych, kanalizacji i nadzór inwestorski. Uprawnienia bez ograniczeń, współpraca z 15 gminami na Kujawach i Pomorzu.",
+    "Projekty sieci wodociągowych i kanalizacji oraz nadzór inwestorski. Tuchola, Chojnice, Świecie, Chełmno, Sępólno Krajeńskie. Uprawnienia bez ograniczeń, 15 gmin.",
   path: "/",
 });
 

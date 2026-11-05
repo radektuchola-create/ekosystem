@@ -35,6 +35,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={active ? "page" : undefined}
                 className={`text-sm font-medium transition-colors ${
                   active ? "text-brand-blue-700" : "text-graphite-700 hover:text-brand-blue-600"
                 }`}
@@ -63,7 +64,7 @@ export function Header() {
           aria-label={open ? "Zamknij menu" : "Otwórz menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-btn text-graphite-900 lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-btn text-graphite-900 lg:hidden"
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -85,6 +86,7 @@ export function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
+                    aria-current={active ? "page" : undefined}
                     onClick={() => setOpen(false)}
                     className={`rounded-btn px-3 py-3 text-base font-medium ${
                       active ? "bg-brand-blue-50 text-brand-blue-700" : "text-graphite-700"

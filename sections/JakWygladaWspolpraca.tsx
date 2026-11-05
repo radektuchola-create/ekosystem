@@ -19,8 +19,8 @@ export function JakWygladaWspolpraca() {
         <div className="relative mt-16">
           <ol className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-12">
             {krokiWspolpracy.map((krok, index) => (
-              <RevealOnScroll key={krok.numer} delay={index * 0.1}>
-                <li className="relative">
+              <li key={krok.numer} className="relative">
+                <RevealOnScroll delay={index * 0.1}>
                   <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue-600 text-white">
                     <Icon name={krok.icon} className="h-5 w-5" strokeWidth={2} />
                   </div>
@@ -29,8 +29,8 @@ export function JakWygladaWspolpraca() {
                   </span>
                   <h3 className="mt-1 text-lg font-semibold text-graphite-900">{krok.tytul}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-graphite-600">{krok.opis}</p>
-                </li>
-              </RevealOnScroll>
+                </RevealOnScroll>
+              </li>
             ))}
           </ol>
         </div>

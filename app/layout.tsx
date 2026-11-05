@@ -78,8 +78,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <a
+          href="#tresc"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-btn focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-graphite-900 focus:shadow-card"
+        >
+          Przejdź do treści
+        </a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="tresc" className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

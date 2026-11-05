@@ -37,7 +37,7 @@ export function ContactForm({ tematDomyslny = "" }: { tematDomyslny?: string }) 
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} aria-describedby="info-wysylki" className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Imię i nazwisko" name="imie" required>
           <input id="imie" name="imie" type="text" required autoComplete="name" className={inputClasses} />
@@ -60,15 +60,17 @@ export function ContactForm({ tematDomyslny = "" }: { tematDomyslny?: string }) 
         <textarea id="wiadomosc" name="wiadomosc" required rows={6} minLength={10} className={inputClasses} />
       </Field>
 
-      <p className="flex items-start gap-2 text-sm leading-relaxed text-graphite-500">
-        <Info className="mt-0.5 h-4 w-4 shrink-0" strokeWidth={1.75} />
-        Wysyłka odbywa się przez Twój program pocztowy, który otworzy się po kliknięciu z gotową
-        do wysłania wiadomością. Dane z formularza nie są zapisywane ani
-        przesyłane przez tę stronę. Więcej w{" "}
-        <Link href="/polityka-prywatnosci" className="font-semibold text-brand-blue-600 hover:text-brand-blue-700">
-          polityce prywatności
-        </Link>
-        .
+      <p id="info-wysylki" className="flex items-start gap-2 text-sm leading-relaxed text-graphite-500">
+        <Info className="mt-0.5 h-4 w-4 shrink-0" strokeWidth={1.75} aria-hidden="true" />
+        <span>
+          Wysyłka odbywa się przez Twój program pocztowy, który otworzy się po kliknięciu z gotową
+          do wysłania wiadomością. Dane z formularza nie są zapisywane ani przesyłane przez tę
+          stronę. Więcej w{" "}
+          <Link href="/polityka-prywatnosci" className="font-semibold text-brand-blue-600 hover:text-brand-blue-700">
+            polityce prywatności
+          </Link>
+          .
+        </span>
       </p>
 
       <Button type="submit" variant="primary" className="w-full sm:w-auto">
@@ -115,4 +117,4 @@ function Field({
 }
 
 const inputClasses =
-  "block w-full rounded-btn border border-graphite-200 px-4 py-2.5 text-graphite-900 placeholder:text-graphite-300 focus:border-brand-blue-500 focus:outline-none focus:ring-2 focus:ring-brand-blue-500/30";
+  "block w-full rounded-btn border border-graphite-200 px-4 py-2.5 text-base text-graphite-900 placeholder:text-graphite-500 focus:border-brand-blue-500 focus:outline-none focus:ring-2 focus:ring-brand-blue-500/30";

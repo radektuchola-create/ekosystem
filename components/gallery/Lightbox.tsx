@@ -34,14 +34,14 @@ export function Lightbox({ images }: { images: string[] }) {
   return (
     <>
       <RevealOnScroll>
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {images.map((obraz, i) => (
             <button
               key={obraz}
               type="button"
               onClick={() => setSelected(i)}
               aria-label={`Powiększ zdjęcie ${i + 1}`}
-              className="group relative aspect-square overflow-hidden rounded-sm bg-graphite-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue-600"
+              className="group relative aspect-[4/5] overflow-hidden rounded-card bg-graphite-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue-600"
             >
               <Image
                 src={obraz}

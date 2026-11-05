@@ -24,7 +24,7 @@ export default function OfertaPage() {
               Oferta
             </p>
             <h1 className="text-4xl font-semibold tracking-tight text-graphite-900 sm:text-5xl">
-              Oferta — projekty i nadzór sieci sanitarnych
+              Projekty i nadzór sieci sanitarnych
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-graphite-600">
               Pełny zakres branży sanitarnej w jednym miejscu, prowadzony od projektu, przez
@@ -37,7 +37,22 @@ export default function OfertaPage() {
 
       <section className="py-20">
         <Container>
-          <div className="divide-y divide-graphite-100">
+          <nav aria-label="Spis usług" className="-mx-6 overflow-x-auto px-6 lg:mx-0 lg:px-0">
+            <ul className="flex gap-2 pb-2 lg:flex-wrap">
+              {uslugi.map((usluga) => (
+                <li key={usluga.slug} className="shrink-0">
+                  <a
+                    href={`#${usluga.slug}`}
+                    className="block whitespace-nowrap rounded-full border border-graphite-200 bg-white px-4 py-2 text-sm font-medium text-graphite-700 transition-colors hover:border-brand-blue-500 hover:text-brand-blue-700"
+                  >
+                    {usluga.tytul}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className="mt-6 divide-y divide-graphite-100">
             {uslugi.map((usluga, index) => (
               <RevealOnScroll key={usluga.slug} delay={(index % 4) * 0.05}>
                 <div id={usluga.slug} className="scroll-mt-24 grid gap-6 py-12 lg:grid-cols-[auto_1fr_auto] lg:items-start lg:gap-10">
@@ -55,7 +70,7 @@ export default function OfertaPage() {
                   <div className="lg:pt-1">
                     <Link
                       href={`/kontakt?temat=${encodeURIComponent(usluga.tytul)}`}
-                      className="inline-flex items-center gap-1 text-sm font-semibold text-brand-blue-600 hover:text-brand-blue-700"
+                      className="inline-flex min-h-11 items-center gap-1 rounded-btn border border-graphite-200 px-4 text-sm font-semibold text-brand-blue-600 hover:border-brand-blue-500 hover:text-brand-blue-700 lg:min-h-0 lg:border-0 lg:px-0"
                     >
                       Zapytaj o tę usługę →
                     </Link>

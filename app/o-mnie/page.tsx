@@ -9,9 +9,9 @@ import { etapyKariery } from "@/content/kariera";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Inżynier z uprawnieniami bez ograniczeń",
+  title: "Radosław Ryl, inżynier sanitarny, Tuchola",
   description:
-    "Radosław Ryl, ok. 20 lat doświadczenia w branży sanitarnej, uprawnienia budowlane (2008) i projektowe (2019) bez ograniczeń, współpraca z 15 gminami.",
+    `Radosław Ryl, ok. ${firma.statystyki.lataDoswiadczenia} lat doświadczenia w branży sanitarnej, uprawnienia budowlane (2008) i projektowe (2019) bez ograniczeń, współpraca z ${firma.liczbaGmin} gminami.`,
   path: "/o-mnie",
 });
 
@@ -38,7 +38,7 @@ export default function OMniePage() {
               Inżynier z uprawnieniami bez ograniczeń
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-graphite-600">
-              Od {new Date().getFullYear() - 2006} lat pracuję na budowach związanych z sieciami
+              Od {firma.statystyki.lataDoswiadczenia} lat pracuję na budowach związanych z sieciami
               sanitarnymi. Doświadczenie zdobywałem jako inżynier budowy, a następnie kierownik
               budowy, uczestnicząc w realizacji skomplikowanych projektów sieci wodociągowych
               oraz sieci kanalizacji sanitarnej i deszczowej. Pełniłem też funkcję kierownika
@@ -46,7 +46,7 @@ export default function OMniePage() {
               poznając tajniki pracy od strony eksploatacji sieci wod-kan.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-graphite-600">
-              Od {new Date().getFullYear() - 2011} lat prowadzę własne biuro projektowe oraz
+              Od {firma.statystyki.lataDzialalnosci} lat prowadzę własne biuro projektowe oraz
               pełnię funkcję inspektora nadzoru inwestorskiego, współpracując na stałe z{" "}
               {firma.liczbaGmin} gminami w regionie oraz kilkunastoma zakładami wodociągowymi.
             </p>
@@ -61,8 +61,8 @@ export default function OMniePage() {
           </h2>
           <ol className="relative mt-12 space-y-10 border-l border-graphite-200 pl-8">
             {etapyKariery.map((etap, index) => (
-              <RevealOnScroll key={etap.tytul} delay={(index % 4) * 0.06}>
-                <li className="relative">
+              <li key={etap.tytul} className="relative">
+                <RevealOnScroll delay={(index % 4) * 0.06}>
                   <span className="absolute -left-[2.15rem] top-1 flex h-4 w-4 items-center justify-center rounded-full border-2 border-white bg-brand-blue-600" />
                   <span className="text-xs font-semibold uppercase tracking-wider text-brand-blue-600">
                     {etap.okres}
@@ -71,8 +71,8 @@ export default function OMniePage() {
                   <p className="mt-2 max-w-2xl text-sm leading-relaxed text-graphite-600">
                     {etap.opis}
                   </p>
-                </li>
-              </RevealOnScroll>
+                </RevealOnScroll>
+              </li>
             ))}
           </ol>
         </Container>
