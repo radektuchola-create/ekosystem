@@ -10,7 +10,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Oferta — projekty i nadzór sieci sanitarnych",
   description:
-    "Projekty sieci wodociągowych, kanalizacji sanitarnej i deszczowej, przyłączy, przepompowni, stacji uzdatniania wody oraz nadzór inwestorski i obsługa formalno-prawna.",
+    "Projekty sieci wodociągowych, kanalizacji sanitarnej i deszczowej, przyłączy, przepompowni, stacji uzdatniania wody, programów funkcjonalno-użytkowych oraz nadzór inwestorski i obsługa formalno-prawna.",
   path: "/oferta",
 });
 

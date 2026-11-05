@@ -99,6 +99,15 @@ export const uslugi: Usluga[] = [
     featured: false,
   },
   {
+    slug: "programy-funkcjonalno-uzytkowe",
+    icon: "ClipboardList",
+    tytul: "Programy funkcjonalno-użytkowe",
+    skrot: "Opracowanie PFU dla zamawiających realizujących inwestycje w formule zaprojektuj i wybuduj.",
+    opis:
+      "Opracowanie programów funkcjonalno-użytkowych (PFU) dla inwestycji sanitarnych realizowanych w formule zaprojektuj i wybuduj, w której wykonawca przygotowuje dokumentację projektową na podstawie wymagań zamawiającego. Program opisuje przedmiot zamówienia tak, aby wykonawcy mogli rzetelnie wycenić ofertę, a zamawiający otrzymał dokładnie to, czego potrzebuje. Obejmuje część opisową, z charakterystycznymi parametrami, uwarunkowaniami wykonania i szczególnymi wymaganiami, oraz część informacyjną, z dokumentami, mapami, wynikami badań gruntu i przepisami, na których opiera się zamówienie, zgodnie z obowiązującymi wymaganiami prawnymi. Doświadczenie projektowe i eksploatacyjne pozwala mi uwzględnić realia wykonania oraz późniejszego utrzymania sieci i obiektów, co ogranicza ryzyko sporów i zmian na etapie realizacji. To opracowanie dla gmin, zakładów wodociągów i kanalizacji oraz innych zamawiających, którzy przygotowują postępowanie przetargowe.",
+    featured: false,
+  },
+  {
     slug: "kompleksowa-obsluga",
     icon: "Stamp",
     tytul: "Kompleksowa obsługa i doradztwo",
